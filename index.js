@@ -1,3 +1,5 @@
+//El siguiente código es un ejemplo de servidor web escrito en Node.js.
+
 const http = require('http');
 
 const hostname = '127.0.0.25';

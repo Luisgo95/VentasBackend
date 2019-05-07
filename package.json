@@ -1,16 +1,19 @@
 {
   "name": "proyecto-compras",
   "version": "1.0.0",
-  "description": "Ventas online ",
-  "main": "index.js",
+  "description": "BAckend de proyecto",
+  "main": "nodemon index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon index"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Shark20/VentasBackend.git"
   },
-  "author": "UMG",
-  "license": "ISC"
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Shark20/VentasBackend/issues"
+  },
+  "homepage": "https://github.com/Shark20/VentasBackend#readme"
 }

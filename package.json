@@ -15,5 +15,12 @@
   "bugs": {
     "url": "https://github.com/Shark20/VentasBackend/issues"
   },
-  "homepage": "https://github.com/Shark20/VentasBackend#readme"
+  "homepage": "https://github.com/Shark20/VentasBackend#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "install": "^0.12.2",
+    "morgan": "^1.9.1",
+    "mysql2": "^1.6.5",
+    "sequelize": "^5.8.5"
+  }
 }

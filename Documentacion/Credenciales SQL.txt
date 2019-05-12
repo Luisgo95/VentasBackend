@@ -1,0 +1,7 @@
+create user 'UserCompras' identified by 'compras123';
+grant usage on *.* to 'UserCompras'@localhost identified by 'compras123';
+create Database comprasBD;
+grant all privileges on  comprasBD.* to 'UserCompras'@localhost;
+flush privileges;
+show grants for 'UserCompras'@localhost;
+use comprasBD;

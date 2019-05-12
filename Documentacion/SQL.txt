@@ -1,0 +1,11 @@
+CREATE TABLE detalleVenta (Id_Detalle_Compra int(10) NOT NULL AUTO_INCREMENT, Id_Producto int(10) NOT NULL, Id_Compra int(10) NOT NULL, Cantidad int(10) NOT NULL, SubTotal double NOT NULL, PRIMARY KEY (Id_Detalle_Compra));
+CREATE TABLE ventas (Id_Compra int(10) NOT NULL AUTO_INCREMENT, Total double NOT NULL, Descuento double NOT NULL, Fecha date NOT NULL, PRIMARY KEY (Id_Compra));
+CREATE TABLE rol (Id_Rol int(10) NOT NULL AUTO_INCREMENT, Nombre varchar(50) NOT NULL, PRIMARY KEY (Id_Rol));
+CREATE TABLE productos (idProducto int(10) NOT NULL AUTO_INCREMENT, Imagen blob NOT NULL, nombre varchar(255) NOT NULL, descripción varchar(255) NOT NULL, Precio float NOT NULL, Precio_Venta double NOT NULL, Fecha_Entrada date NOT NULL, Fecha_Vencimiento date NOT NULL, Cantidad float NOT NULL, IdUsuarios int(10) NOT NULL, PRIMARY KEY (idProducto));
+CREATE TABLE usuarios (Id_User int(10) NOT NULL AUTO_INCREMENT, Primer_nombre varchar(255) NOT NULL, Segundo_nombre varchar(255) NOT NULL, Apellidos varchar(255) NOT NULL, email varchar(255) NOT NULL, contraseña varchar(255) NOT NULL, Id_rol int(10) NOT NULL, PRIMARY KEY (Id_User));
+CREATE TABLE asignacion (Id_Asignacion int(10) NOT NULL AUTO_INCREMENT, Id_Rol int(10) NOT NULL, Id_User int(10) NOT NULL, PRIMARY KEY (Id_Asignacion));
+ALTER TABLE detalleVenta ADD INDEX FKdetalleVen479815 (Id_Producto), ADD CONSTRAINT FKdetalleVen479815 FOREIGN KEY (Id_Producto) REFERENCES productos (idProducto);
+ALTER TABLE detalleVenta ADD INDEX FKdetalleVen275275 (Id_Compra), ADD CONSTRAINT FKdetalleVen275275 FOREIGN KEY (Id_Compra) REFERENCES ventas (Id_Compra);
+ALTER TABLE productos ADD INDEX FKproductos526600 (IdUsuarios), ADD CONSTRAINT FKproductos526600 FOREIGN KEY (IdUsuarios) REFERENCES usuarios (Id_User);
+ALTER TABLE asignacion ADD INDEX FKasignacion344240 (Id_Rol), ADD CONSTRAINT FKasignacion344240 FOREIGN KEY (Id_Rol) REFERENCES rol (Id_Rol);
+ALTER TABLE asignacion ADD INDEX FKasignacion49621 (Id_User), ADD CONSTRAINT FKasignacion49621 FOREIGN KEY (Id_User) REFERENCES usuarios (Id_User);

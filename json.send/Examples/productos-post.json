@@ -1,0 +1,12 @@
+{    
+    "Imagen": "4D6574616C6C696341206973207468652062657374",
+    "nombre":"Maxi bodega" ,
+    "descripcion": "venta de articulos diarios",
+    "Precio": 30,
+    "Precio_Venta": 45.50,
+    "Fecha_Entrada":"10/10/2019",
+    "Fecha_Vencimiento": "15/15/2019",
+    "Cantidad": 10,
+    "IdUsuarios": 1
+    
+}

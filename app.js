@@ -1,17 +1,17 @@
 const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
-const morgan = require('morgan');
+//const morgan = require('morgan');
 
 // Importacion de rutas ver ejemplo comentado abajo
 //const RouteDetalleFuncion = require('./app/route/detalle_funcion.route');
 //const RoutePersona = require('./app/route/persona.route');
 const RouteProducto = require('./app/route/producto.route');
 
-app.use(morgan('dev'));
+/** app.use(morgan('dev'));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-
+*/
 const db = require('./app/config/db.config.js');
 
 // // force: true will drop the table if it already exists
@@ -21,7 +21,7 @@ const db = require('./app/config/db.config.js');
 
 // Encadenar rutas a la app, ver ejemplo comentado abajo 
 //en plural las rutas
-app.use('/personas', RoutePersona);
+//app.use('/personas', RoutePersona);
 app.use('/productos', RouteProducto);
 
 // middlewares

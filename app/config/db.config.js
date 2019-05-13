@@ -22,7 +22,7 @@ db.Sequelize = Sequelize;
 db.sequelize = sequelize;
 
 //Agregar los modelos de los objetos
-db.empresa = require('../model/empresa.model.js')(sequelize, Sequelize);
-db.persona = require('../model/persona.model.js')(sequelize, Sequelize);
+//db.empresa = require('../model/empresa.model.js')(sequelize, Sequelize);
+db.producto = require('../model/m_productos')(sequelize, Sequelize);
 
 module.exports = db;

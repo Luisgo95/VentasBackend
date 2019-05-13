@@ -6,7 +6,7 @@ router
 	.get('/', producto.findAll)
     .post('/', producto.create);
 router
-	.get('/:id', producto.findById)
+	.get('/:id', producto.findByPk)
     .delete('/:id', producto.delete)
     .put('/:id', producto.update);
 

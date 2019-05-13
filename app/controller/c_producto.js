@@ -6,8 +6,7 @@ exports.create = (req, res) =>
 	producto.create
 	(
 		{
-			
-			Imagen: req.body.Imagen,
+						//Imagen: req.body.Imagen,
             nombre: req.body.nombre,
             descripcion: req.body.descripcion,
             Precio: req.body.Precio,
@@ -23,6 +22,7 @@ exports.create = (req, res) =>
 		producto => {res.status(200).json(producto);}
 	)
 	.catch (
+
 		err => {res.status(500).json({ error: err })}
 	);
 };
@@ -54,7 +54,7 @@ exports.update = (req, res) =>
 	producto.update
 	(
 		{
-            Imagen: req.body.Imagen,
+          //  Imagen: req.body.Imagen,
             nombre: req.body.nombre,
             descripcion: req.body.descripcion,
             Precio: req.body.Precio,
@@ -65,7 +65,7 @@ exports.update = (req, res) =>
             IdUsuarios: req.body.IdUsuarios
 		},
 		{
-			where: { idProducto: req.params.id }
+			where: { id: req.params.id }
 		}
 	)
 	.then (
@@ -82,7 +82,7 @@ exports.delete = (req, res) =>
 	producto.destroy
 	(
 		{
-			where: { idProducto: req.params.id }
+			where: { id: req.params.id }
 		}
 	)
 	.then (

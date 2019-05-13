@@ -1,8 +1,8 @@
 module.exports = (sequelize, Sequelize) => {
-	const producto = sequelize.define('producto', {
-        Imagen: {
+	const productos = sequelize.define('productos', {
+ /**   Imagen: {
             type: Sequelize.BLOB
-            },
+ },*/
         nombre: {
 		type: Sequelize.STRING
         },
@@ -11,23 +11,23 @@ module.exports = (sequelize, Sequelize) => {
 		type: Sequelize.STRING
         },
     Precio: {
-		type: Sequelize.number
+		type: Sequelize.FLOAT
         },
     Precio_Venta: {
-		type: Sequelize.number
+		type: Sequelize.FLOAT
         },
     Fecha_Entrada: {
-        type: Sequelize.date
+        type: Sequelize.DATE
         },
         Fecha_Vencimiento: {
-		type: Sequelize.date
+		type: Sequelize.DATE
         },
     Cantidad: {
-		type: Sequelize.number
+		type: Sequelize.INTEGER
         },
     IdUsuarios: {
-		type: Sequelize.number
+		type: Sequelize.INTEGER
         }
 	});
-	return producto;
+	return productos;
 }
